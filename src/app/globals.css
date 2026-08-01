@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #ffffff;
+    --text-primary: #09090b;
+    --accent: #00ff66;
+    --accent-glow: rgba(0, 255, 106, 0.4);
+  }
+
+  .dark {
+    --bg-primary: #020202;
+    --text-primary: #f4f4f5;
+    --accent: #00ff66;
+    --accent-glow: rgba(0, 255, 106, 0.5);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes drive-car {
+  0% {
+    transform: translateX(-120px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 120px));
+  }
+}
+
+@keyframes wheel-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes smoke-puff {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.6) translate(0, 0);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.2) translate(-25px, -15px);
+  }
+}
+
+@keyframes border-beam {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+/* Cybernetic F1 / Robot Car Styles */
+.mini-car {
+  position: relative;
+  width: 44px;
+  height: 16px;
+  background: linear-gradient(90deg, #00ff66, #00ffff);
+  border-radius: 6px 14px 4px 4px;
+  box-shadow: 0 0 12px #00ff66, 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.mini-car::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 12px;
+  width: 18px;
+  height: 8px;
+  background: #020202;
+  border: 1px solid #00ff66;
+  border-radius: 4px 4px 0 0;
+}
+
+.car-spoiler {
+  position: absolute;
+  top: -8px;
+  left: 2px;
+  width: 8px;
+  height: 10px;
+  background: #00ff66;
+  border-radius: 2px;
+  box-shadow: 0 0 6px #00ff66;
+}
+
+.car-wheel {
+  position: absolute;
+  bottom: -5px;
+  width: 10px;
+  height: 10px;
+  background: #020202;
+  border: 2px solid #00ff66;
+  border-radius: 50%;
+  animation: wheel-spin 0.3s linear infinite;
+}
+
+.wheel-back {
+  left: 6px;
+}
+
+.wheel-front {
+  right: 8px;
+}
+
+/* Smoke particles behind racing car */
+.car-smoke {
+  position: absolute;
+  bottom: 0px;
+  left: -12px;
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 255, 102, 0.4);
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: smoke-puff 0.8s ease-out infinite;
+}
+
+.car-smoke-1 { animation-delay: 0s; }
+.car-smoke-2 { animation-delay: 0.25s; }
+.car-smoke-3 { animation-delay: 0.5s; }
+
+/* Text Stroke Effects */
+.text-stroke-white {
+  -webkit-text-stroke: 2px #ffffff;
+}
+.text-stroke-neon {
+  -webkit-text-stroke: 2px #00ff66;
+}
+
+@media (min-width: 768px) {
+  .text-stroke-white {
+    -webkit-text-stroke: 4px #ffffff;
+  }
+  .text-stroke-neon {
+    -webkit-text-stroke: 4px #00ff66;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020202;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff66;
+}
