@@ -220,109 +220,105 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
           <MouseTrackingRobot />
         </motion.div>
 
-        {/* Action Call-To-Action Buttons & Resume Trigger */}
+        {/* UNIFIED CYBER COMMAND DECK (Organized, Bulky & Fully Connected) */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.35 }}
-          className="flex flex-wrap items-center justify-center gap-4 mt-2 sm:mt-4 z-20"
+          transition={{ duration: 0.7, delay: 0.35 }}
+          className="w-full max-w-4xl mt-3 p-6 sm:p-8 rounded-3xl border border-white/10 bg-gradient-to-b from-zinc-950/90 via-black/95 to-zinc-950/90 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.9),0_0_40px_rgba(0,255,102,0.06)] flex flex-col items-center gap-6 z-20"
         >
-          <a
-            href="#projects"
-            className="px-8 py-4 rounded-xl bg-[#00ff66] text-black font-extrabold text-sm md:text-base font-montserrat transition-all duration-300 hover:bg-[#00e65c] hover:scale-105 active:scale-95 shadow-xl shadow-[#00ff66]/25 flex items-center gap-2 group cursor-pointer"
-          >
-            Explore Projects
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
-
-          {onOpenResume && (
-            <button
-              onClick={onOpenResume}
-              className="px-7 py-4 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-sm md:text-base font-mono border border-white/20 transition-all hover:scale-105 active:scale-95 backdrop-blur-md flex items-center gap-2 cursor-pointer shadow-lg"
+          {/* 1. Primary Action Call-To-Action Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-4 w-full">
+            <a
+              href="#projects"
+              className="flex-1 sm:flex-initial min-w-[200px] px-8 py-4 rounded-xl bg-[#00ff66] text-black font-extrabold text-sm md:text-base font-montserrat transition-all duration-300 hover:bg-[#00e65c] hover:scale-105 active:scale-95 shadow-xl shadow-[#00ff66]/25 flex items-center justify-center gap-2 group cursor-pointer"
             >
-              <FileText className="w-5 h-5 text-[#00ff66]" /> View Resume
-            </button>
-          )}
+              Explore Projects
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
 
-          <a
-            href="#skills"
-            className="px-7 py-4 rounded-xl bg-black/60 hover:bg-white/5 text-zinc-300 hover:text-white font-bold text-sm md:text-base font-mono border border-zinc-800 hover:border-zinc-600 transition-all hover:scale-105 active:scale-95 backdrop-blur-md flex items-center gap-2 cursor-pointer"
-          >
-            <Code2 className="w-5 h-5 text-[#00ff66]" /> Tech Stack IDE
-          </a>
-        </motion.div>
-
-        {/* Core Capabilities Badges */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mt-8 z-20"
-        >
-          {techBadges.map((badge, idx) => {
-            const Icon = badge.icon;
-            return (
-              <div
-                key={idx}
-                className="flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-zinc-950/70 border border-zinc-800/80 backdrop-blur-md hover:border-[#00ff66]/40 transition-colors"
+            {onOpenResume && (
+              <button
+                onClick={onOpenResume}
+                className="flex-1 sm:flex-initial min-w-[180px] px-7 py-4 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-sm md:text-base font-mono border border-white/20 transition-all hover:scale-105 active:scale-95 backdrop-blur-md flex items-center justify-center gap-2 cursor-pointer shadow-lg"
               >
-                <Icon className={`w-3.5 h-3.5 ${badge.color}`} />
-                <span className="text-xs font-mono font-medium text-zinc-300">{badge.label}</span>
-              </div>
-            );
-          })}
-        </motion.div>
+                <FileText className="w-5 h-5 text-[#00ff66]" /> View Resume
+              </button>
+            )}
 
-        {/* Live Credibility Statistics Ribbon */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.45 }}
-          className="grid grid-cols-3 divide-x divide-zinc-800/80 border border-zinc-800/80 rounded-2xl bg-zinc-950/60 backdrop-blur-xl mt-8 max-w-xl w-full py-3.5 px-2 shadow-2xl z-20"
-        >
-          {quickStats.map((stat, idx) => (
-            <div key={idx} className="flex flex-col items-center px-2">
-              <span className="text-xl sm:text-2xl font-black font-montserrat text-[#00ff66] tracking-tight">
-                {stat.value}
-              </span>
-              <span className="text-[11px] sm:text-xs font-mono text-zinc-400 text-center uppercase tracking-wider font-semibold mt-0.5">
-                {stat.label}
-              </span>
+            <a
+              href="#skills"
+              className="flex-1 sm:flex-initial min-w-[180px] px-7 py-4 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 hover:text-white font-bold text-sm md:text-base font-mono border border-zinc-700/80 transition-all hover:scale-105 active:scale-95 backdrop-blur-md flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <Code2 className="w-5 h-5 text-[#00ff66]" /> Tech Stack IDE
+            </a>
+          </div>
+
+          {/* Divider with Terminal Glow */}
+          <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent" />
+
+          {/* 2. Core Capabilities & Framework Chips */}
+          <div className="w-full flex flex-col items-center gap-3">
+            <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-zinc-500 font-semibold">
+              ENGINEERED WITH MODERN TECH ARCHITECTURE
+            </span>
+            <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
+              {techBadges.map((badge, idx) => {
+                const Icon = badge.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="flex items-center gap-2 px-4 py-2 rounded-xl bg-black/60 border border-zinc-800 hover:border-[#00ff66]/40 transition-colors shadow-sm"
+                  >
+                    <Icon className={`w-4 h-4 ${badge.color}`} />
+                    <span className="text-xs font-mono font-medium text-zinc-200">{badge.label}</span>
+                  </div>
+                );
+              })}
             </div>
-          ))}
-        </motion.div>
+          </div>
 
-        {/* Social Quick Links */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="flex items-center gap-5 mt-6 text-zinc-400 z-20"
-        >
-          <a
-            href="https://github.com/SaiyedMuhammadAnasMaududi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-xs font-mono hover:text-[#00ff66] transition-colors"
-          >
-            <Github className="w-4 h-4" /> GitHub
-          </a>
-          <span className="text-zinc-700">•</span>
-          <a
-            href="https://linkedin.com/in/anas-maududi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-xs font-mono hover:text-[#00ff66] transition-colors"
-          >
-            <Linkedin className="w-4 h-4" /> LinkedIn
-          </a>
-          <span className="text-zinc-700">•</span>
-          <a
-            href="#contact"
-            className="flex items-center gap-1.5 text-xs font-mono hover:text-[#00ff66] transition-colors"
-          >
-            <Mail className="w-4 h-4" /> Contact
-          </a>
+          {/* 3. Live Credibility Statistics Ribbon */}
+          <div className="w-full grid grid-cols-3 divide-x divide-zinc-800/80 border border-zinc-800/80 rounded-2xl bg-black/50 py-4 px-3 shadow-inner">
+            {quickStats.map((stat, idx) => (
+              <div key={idx} className="flex flex-col items-center px-2">
+                <span className="text-2xl sm:text-3xl font-black font-montserrat text-[#00ff66] tracking-tight">
+                  {stat.value}
+                </span>
+                <span className="text-[11px] sm:text-xs font-mono text-zinc-400 text-center uppercase tracking-wider font-semibold mt-1">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* 4. Social Quick Links */}
+          <div className="flex items-center justify-center gap-6 pt-1 text-zinc-400">
+            <a
+              href="https://github.com/SaiyedMuhammadAnasMaududi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-xs font-mono font-semibold hover:text-[#00ff66] transition-colors"
+            >
+              <Github className="w-4 h-4" /> GitHub
+            </a>
+            <span className="text-zinc-700">•</span>
+            <a
+              href="https://linkedin.com/in/anas-maududi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-xs font-mono font-semibold hover:text-[#00ff66] transition-colors"
+            >
+              <Linkedin className="w-4 h-4" /> LinkedIn
+            </a>
+            <span className="text-zinc-700">•</span>
+            <a
+              href="#contact"
+              className="flex items-center gap-2 text-xs font-mono font-semibold hover:text-[#00ff66] transition-colors"
+            >
+              <Mail className="w-4 h-4" /> Contact
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>
