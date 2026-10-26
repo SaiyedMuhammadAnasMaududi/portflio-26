@@ -110,10 +110,13 @@ export default function AboutSection({ onOpenResume }: AboutSectionProps) {
 
             <div className="space-y-4 font-sans text-zinc-300 text-sm md:text-base leading-relaxed">
               <p>
-                Hello! I'm <strong className="text-white">Syed Muhammad Anas Maududi</strong>, a results-driven Full-Stack &amp; AI-Native Developer with 5 years of hands-on experience building, debugging, and scaling modern web applications and autonomous AI systems.
+                Hello! I'm <strong className="text-white">Syed Muhammad Anas Maududi</strong>, a results-driven Backend &amp; Full-Stack Developer and AI Engineer with 5 years of hands-on experience building, debugging, and scaling modern web applications, robust REST APIs, and autonomous AI systems.
               </p>
               <p>
-                My expertise spans React, Next.js, TypeScript, Python, Node.js, PostgreSQL, Supabase, Neon DB, Docker, and Kubernetes. I have a proven track record delivering production-grade commercial websites for clients (such as <strong className="text-[#00ff66]">Danish Traders</strong>), manufacturing autonomous AI Employees using the <strong className="text-[#00ff66]">OpenAI Agent SDK</strong>, and orchestrating RAG-based agentic workflows.
+                Honored to serve as an <strong className="text-[#00ff66]">AI &amp; Startup Mentor at Governor House Karachi (GIAIC)</strong>, selected <strong className="text-cyan-400">among the Top 5 students for mentorship (Alhamdulillah)</strong>. I also qualified among the top ~50,000 students out of 500,000+ applicants for the Governor's Initiative for AI, Web 3.0 &amp; Metaverse.
+              </p>
+              <p>
+                My expertise spans Node.js, Python, React, Next.js, TypeScript, PostgreSQL, MongoDB, Neon DB, Supabase, Docker, and Kubernetes. I have a proven track record delivering live commercial web applications for clients (including <strong className="text-[#00ff66]">Danish Traders — danishtraders.pk</strong>) and orchestrating autonomous agentic workflows with the <strong className="text-[#00ff66]">OpenAI Agent SDK</strong>.
               </p>
             </div>
 
@@ -138,13 +141,13 @@ export default function AboutSection({ onOpenResume }: AboutSectionProps) {
                 <div className="flex items-center gap-2 mb-2">
                   <Cpu className="w-4 h-4 text-cyan-400" />
                   <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider font-bold">
-                    AI Specialization
+                    Mentorship Honor
                   </span>
                 </div>
                 <span className="text-sm md:text-base font-bold font-montserrat text-white">
-                  AI Employees &amp; RAG
+                  Top 5 Mentor @ Governor House
                 </span>
-                <span className="text-xs text-zinc-400 mt-1">OpenAI Agent SDK</span>
+                <span className="text-xs text-zinc-400 mt-1">AI &amp; Startup Mentor (GIAIC)</span>
               </div>
 
               {/* Card 3 */}

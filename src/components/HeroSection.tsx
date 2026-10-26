@@ -197,7 +197,7 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-mono text-zinc-200 max-w-4xl mb-3 font-semibold tracking-tight"
         >
-          Full-Stack Developer <span className="text-[#00ff66] font-normal">&amp;</span> AI Systems Architect
+          Full-Stack &amp; AI Systems Engineer <span className="text-zinc-600">|</span> <span className="text-[#00ff66]">AI &amp; Startup Mentor @ Governor House</span>
         </motion.p>
 
         {/* Professional Mission Statement */}
