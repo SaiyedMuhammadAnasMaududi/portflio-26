@@ -158,8 +158,8 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
         </h1>
       </div>
 
-      {/* Main Content & Interactive Mouse Tracking Robot */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center flex flex-col items-center">
+      {/* Main Content & Side-By-Side Layout (Robot Aside with Interactive Console) */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
         {/* Availability & Status Pill */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -185,7 +185,7 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black font-montserrat tracking-tight text-white mb-3"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black font-montserrat tracking-tight text-white mb-2"
         >
           Syed Muhammad <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff66] via-emerald-300 to-cyan-400">Anas Maududi</span>
         </motion.h1>
@@ -195,7 +195,7 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-mono text-zinc-200 max-w-4xl mb-3 font-semibold tracking-tight"
+          className="text-base sm:text-xl md:text-2xl font-mono text-zinc-200 max-w-4xl mb-2 font-semibold tracking-tight"
         >
           Full-Stack &amp; AI Systems Engineer <span className="text-zinc-600">|</span> <span className="text-[#00ff66]">AI &amp; Startup Mentor @ Governor House</span>
         </motion.p>
@@ -205,121 +205,129 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.25 }}
-          className="text-sm md:text-base font-sans text-zinc-400 max-w-2xl mb-4 leading-relaxed"
+          className="text-xs sm:text-sm md:text-base font-sans text-zinc-400 max-w-2xl mb-6 leading-relaxed"
         >
           Building high-octane web products, scalable cloud backends, and autonomous agentic AI systems that solve real-world industry problems.
         </motion.p>
 
-        {/* INTERACTIVE 3D SPLINE ROBOT CHARACTER (Reacts to Mouse Cursor) */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="w-full flex justify-center -my-2 sm:my-0"
-        >
-          <MouseTrackingRobot />
-        </motion.div>
-
-        {/* UNIFIED CYBER COMMAND DECK (Organized, Bulky & Fully Connected) */}
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.35 }}
-          className="w-full max-w-4xl mt-3 p-6 sm:p-8 rounded-3xl border border-white/10 bg-gradient-to-b from-zinc-950/90 via-black/95 to-zinc-950/90 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.9),0_0_40px_rgba(0,255,102,0.06)] flex flex-col items-center gap-6 z-20"
-        >
-          {/* 1. Primary Action Call-To-Action Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-4 w-full">
-            <a
-              href="#projects"
-              className="flex-1 sm:flex-initial min-w-[200px] px-8 py-4 rounded-xl bg-[#00ff66] text-black font-extrabold text-sm md:text-base font-montserrat transition-all duration-300 hover:bg-[#00e65c] hover:scale-105 active:scale-95 shadow-xl shadow-[#00ff66]/25 flex items-center justify-center gap-2 group cursor-pointer"
-            >
-              Explore Projects
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-
-            {onOpenResume && (
-              <button
-                onClick={onOpenResume}
-                className="flex-1 sm:flex-initial min-w-[180px] px-7 py-4 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-sm md:text-base font-mono border border-white/20 transition-all hover:scale-105 active:scale-95 backdrop-blur-md flex items-center justify-center gap-2 cursor-pointer shadow-lg"
-              >
-                <FileText className="w-5 h-5 text-[#00ff66]" /> View Resume
-              </button>
-            )}
-
-            <a
-              href="#skills"
-              className="flex-1 sm:flex-initial min-w-[180px] px-7 py-4 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 hover:text-white font-bold text-sm md:text-base font-mono border border-zinc-700/80 transition-all hover:scale-105 active:scale-95 backdrop-blur-md flex items-center justify-center gap-2 cursor-pointer"
-            >
-              <Code2 className="w-5 h-5 text-[#00ff66]" /> Tech Stack IDE
-            </a>
-          </div>
-
-          {/* Divider with Terminal Glow */}
-          <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent" />
-
-          {/* 2. Core Capabilities & Framework Chips */}
-          <div className="w-full flex flex-col items-center gap-3">
-            <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-zinc-500 font-semibold">
-              ENGINEERED WITH MODERN TECH ARCHITECTURE
-            </span>
-            <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
-              {techBadges.map((badge, idx) => {
-                const Icon = badge.icon;
-                return (
-                  <div
-                    key={idx}
-                    className="flex items-center gap-2 px-4 py-2 rounded-xl bg-black/60 border border-zinc-800 hover:border-[#00ff66]/40 transition-colors shadow-sm"
-                  >
-                    <Icon className={`w-4 h-4 ${badge.color}`} />
-                    <span className="text-xs font-mono font-medium text-zinc-200">{badge.label}</span>
-                  </div>
-                );
-              })}
+        {/* SIDE-BY-SIDE HERO WORKSPACE: 3D Robot Aside with Interactive Command Deck */}
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mt-2">
+          {/* LEFT COLUMN: Interactive Mouse Tracking 3D Robot Character */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="lg:col-span-5 flex flex-col items-center justify-center relative select-none"
+          >
+            <div className="relative w-full flex items-center justify-center">
+              <MouseTrackingRobot />
             </div>
-          </div>
+          </motion.div>
 
-          {/* 3. Live Credibility Statistics Ribbon */}
-          <div className="w-full grid grid-cols-3 divide-x divide-zinc-800/80 border border-zinc-800/80 rounded-2xl bg-black/50 py-4 px-3 shadow-inner">
-            {quickStats.map((stat, idx) => (
-              <div key={idx} className="flex flex-col items-center px-2">
-                <span className="text-2xl sm:text-3xl font-black font-montserrat text-[#00ff66] tracking-tight">
-                  {stat.value}
-                </span>
-                <span className="text-[11px] sm:text-xs font-mono text-zinc-400 text-center uppercase tracking-wider font-semibold mt-1">
-                  {stat.label}
-                </span>
+          {/* RIGHT COLUMN: Rich Interactive Command Deck */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.35 }}
+            className="lg:col-span-7 flex flex-col justify-center"
+          >
+            <div className="w-full p-6 sm:p-8 rounded-3xl border border-white/10 bg-gradient-to-b from-zinc-950/90 via-black/95 to-zinc-950/90 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.9),0_0_40px_rgba(0,255,102,0.06)] flex flex-col items-center lg:items-start text-left gap-6 z-20">
+              
+              {/* 1. Primary Action Call-To-Action Buttons */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 w-full">
+                <a
+                  href="#projects"
+                  className="flex-1 sm:flex-initial min-w-[170px] px-6 sm:px-7 py-3.5 rounded-xl bg-[#00ff66] text-black font-extrabold text-sm md:text-base font-montserrat transition-all duration-300 hover:bg-[#00e65c] hover:scale-105 active:scale-95 shadow-xl shadow-[#00ff66]/25 flex items-center justify-center gap-2 group cursor-pointer"
+                >
+                  Explore Projects
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+
+                {onOpenResume && (
+                  <button
+                    onClick={onOpenResume}
+                    className="flex-1 sm:flex-initial min-w-[150px] px-6 sm:px-7 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-sm md:text-base font-mono border border-white/20 transition-all hover:scale-105 active:scale-95 backdrop-blur-md flex items-center justify-center gap-2 cursor-pointer shadow-lg"
+                  >
+                    <FileText className="w-4 h-4 sm:w-5 sm:h-5 text-[#00ff66]" /> View Resume
+                  </button>
+                )}
+
+                <a
+                  href="#skills"
+                  className="flex-1 sm:flex-initial min-w-[150px] px-6 sm:px-7 py-3.5 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 hover:text-white font-bold text-sm md:text-base font-mono border border-zinc-700/80 transition-all hover:scale-105 active:scale-95 backdrop-blur-md flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <Code2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#00ff66]" /> Tech Stack IDE
+                </a>
               </div>
-            ))}
-          </div>
 
-          {/* 4. Social Quick Links */}
-          <div className="flex items-center justify-center gap-6 pt-1 text-zinc-400">
-            <a
-              href="https://github.com/SaiyedMuhammadAnasMaududi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs font-mono font-semibold hover:text-[#00ff66] transition-colors"
-            >
-              <Github className="w-4 h-4" /> GitHub
-            </a>
-            <span className="text-zinc-700">•</span>
-            <a
-              href="https://linkedin.com/in/anas-maududi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs font-mono font-semibold hover:text-[#00ff66] transition-colors"
-            >
-              <Linkedin className="w-4 h-4" /> LinkedIn
-            </a>
-            <span className="text-zinc-700">•</span>
-            <a
-              href="#contact"
-              className="flex items-center gap-2 text-xs font-mono font-semibold hover:text-[#00ff66] transition-colors"
-            >
-              <Mail className="w-4 h-4" /> Contact
-            </a>
-          </div>
-        </motion.div>
+              {/* Divider with Terminal Glow */}
+              <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent" />
+
+              {/* 2. Core Capabilities & Framework Chips */}
+              <div className="w-full flex flex-col items-center lg:items-start gap-3">
+                <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-zinc-500 font-semibold text-center lg:text-left">
+                  ENGINEERED WITH MODERN TECH ARCHITECTURE
+                </span>
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+                  {techBadges.map((badge, idx) => {
+                    const Icon = badge.icon;
+                    return (
+                      <div
+                        key={idx}
+                        className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-black/60 border border-zinc-800 hover:border-[#00ff66]/40 transition-colors shadow-sm"
+                      >
+                        <Icon className={`w-3.5 h-3.5 ${badge.color}`} />
+                        <span className="text-xs font-mono font-medium text-zinc-200">{badge.label}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* 3. Live Credibility Statistics Ribbon */}
+              <div className="w-full grid grid-cols-3 divide-x divide-zinc-800/80 border border-zinc-800/80 rounded-2xl bg-black/50 py-3.5 px-3 shadow-inner">
+                {quickStats.map((stat, idx) => (
+                  <div key={idx} className="flex flex-col items-center px-2">
+                    <span className="text-xl sm:text-2xl font-black font-montserrat text-[#00ff66] tracking-tight">
+                      {stat.value}
+                    </span>
+                    <span className="text-[10px] sm:text-xs font-mono text-zinc-400 text-center uppercase tracking-wider font-semibold mt-1">
+                      {stat.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {/* 4. Social Quick Links */}
+              <div className="flex items-center justify-center lg:justify-start gap-6 pt-1 text-zinc-400 w-full">
+                <a
+                  href="https://github.com/SaiyedMuhammadAnasMaududi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-xs font-mono font-semibold hover:text-[#00ff66] transition-colors"
+                >
+                  <Github className="w-4 h-4" /> GitHub
+                </a>
+                <span className="text-zinc-700">•</span>
+                <a
+                  href="https://linkedin.com/in/anas-maududi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-xs font-mono font-semibold hover:text-[#00ff66] transition-colors"
+                >
+                  <Linkedin className="w-4 h-4" /> LinkedIn
+                </a>
+                <span className="text-zinc-700">•</span>
+                <a
+                  href="#contact"
+                  className="flex items-center gap-2 text-xs font-mono font-semibold hover:text-[#00ff66] transition-colors"
+                >
+                  <Mail className="w-4 h-4" /> Contact
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

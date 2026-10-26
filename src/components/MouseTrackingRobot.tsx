@@ -54,7 +54,7 @@ export default function MouseTrackingRobot() {
           x: { type: 'spring', stiffness: 120, damping: 20 },
           y: { repeat: Infinity, duration: 3.8, ease: 'easeInOut' },
         }}
-        className="relative w-80 h-80 md:w-[500px] md:h-[500px] lg:w-[560px] lg:h-[560px] flex items-center justify-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
+        className="relative w-72 h-72 sm:w-88 sm:h-88 md:w-[460px] md:h-[460px] lg:w-[500px] lg:h-[500px] flex items-center justify-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
       >
         {/* CENTER STATE IMAGE */}
         <motion.img
