@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import ImmersiveIntroModal from '@/components/ImmersiveIntroModal';
+// ImmersiveIntroModal kept imported for quick re-enabling in the future
+// import ImmersiveIntroModal from '@/components/ImmersiveIntroModal';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
@@ -18,8 +19,8 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen bg-[#020202] text-white selection:bg-[#00ff66] selection:text-black">
-      {/* Immersive Loader Modal */}
-      <ImmersiveIntroModal onEnter={() => {}} />
+      {/* Immersive Loader Modal (hidden for now as requested) */}
+      {/* <ImmersiveIntroModal onEnter={() => {}} /> */}
 
       {/* Main Navigation */}
       <Navbar />

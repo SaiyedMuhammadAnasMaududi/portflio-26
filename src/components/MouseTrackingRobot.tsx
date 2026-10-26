@@ -32,9 +32,9 @@ export default function MouseTrackingRobot() {
   const translateX = (mousePos.x - 0.5) * 60; // Shifts slightly towards cursor
 
   return (
-    <div className="relative flex flex-col items-center justify-center pointer-events-none select-none my-2 z-20">
+    <div className="relative flex flex-col items-center justify-center pointer-events-none select-none my-1 md:my-3 z-20">
       {/* Ambient Neon Backlight Glow */}
-      <div className="absolute w-[420px] h-[420px] rounded-full bg-gradient-to-r from-[#00ff66]/30 via-cyan-400/25 to-[#3758f9]/30 blur-[100px] pointer-events-none" />
+      <div className="absolute w-[460px] h-[460px] md:w-[580px] md:h-[580px] rounded-full bg-gradient-to-r from-[#00ff66]/25 via-cyan-400/20 to-[#3758f9]/25 blur-[120px] pointer-events-none" />
 
       {/* 3D Container with Seamless Mouse Tracking Rotation & Pose Swapping */}
       <motion.div
@@ -54,7 +54,7 @@ export default function MouseTrackingRobot() {
           x: { type: 'spring', stiffness: 120, damping: 20 },
           y: { repeat: Infinity, duration: 3.8, ease: 'easeInOut' },
         }}
-        className="relative w-80 h-80 md:w-[460px] md:h-[460px] flex items-center justify-center"
+        className="relative w-80 h-80 md:w-[500px] md:h-[500px] lg:w-[560px] lg:h-[560px] flex items-center justify-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
       >
         {/* CENTER STATE IMAGE */}
         <motion.img
